@@ -1,0 +1,15 @@
+# Coloque aqui o logo e as imagens dos combos.
+# Nomes esperados pelo catálogo atual (data/combos.php):
+#   logo-vitalbrasil.png
+#   rotina-vital-mulher.jpg
+#   painel-hormonal-feminino.jpg
+#   rotina-vital-homem.jpg
+#   painel-masculino-vitaminas-hormonios.jpg
+#   rotina-vital-infantil.jpg
+#   rotina-vital-performance.jpg
+#   painel-queda-capilar.jpg
+#   check-up-vitaminas.jpg
+#   avaliacao-inchaco.jpg
+#   minipainel-respiratorio.jpg
+#
+# Se a imagem não existir, o card mostra um placeholder "Vital Brasil" automaticamente.
