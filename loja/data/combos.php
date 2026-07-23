@@ -416,7 +416,7 @@ return [
         'categoria'  => 'Genético',
         'destaque'   => false,
         'resumo'     => 'Descubra suas origens: análise de DNA autossômico, mitocondrial e dos cromossomos X e Y.',
-        'imagem'     => 'assets/img/teste-ancestralidade.jpg', // IMAGEM PENDENTE
+        'imagem'     => 'assets/img/teste-ancestralidade.jpg',
         'preco'      => 520.00,
         'preco_de'   => 0,
         'preco_obs'  => 'À vista, no PIX ou em até 6x no cartão (Banrisul, Mastercard ou Visa)',

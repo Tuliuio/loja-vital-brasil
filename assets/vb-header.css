@@ -8,7 +8,7 @@
   --vb-azul-escuro: #2a3c72;
   --vb-verde: #3db885;
   --vb-verde-escuro: #34a074;
-  --vb-header-h: 68px;
+  --vb-header-h: 84px;
 }
 
 .vb-header {
@@ -37,7 +37,7 @@
 
 /* Logo */
 .vb-header__logo { display: inline-flex; align-items: center; flex: 0 0 auto; }
-.vb-header__logo img { height: 40px; width: auto; display: block; }
+.vb-header__logo img { height: 34px; width: auto; display: block; }
 
 /* Navegação */
 .vb-header__nav {
@@ -186,5 +186,5 @@
 
 @media (max-width: 400px) {
   .vb-header__inner { padding: 10px 16px; }
-  .vb-header__logo img { height: 34px; }
+  .vb-header__logo img { height: 30px; }
 }
