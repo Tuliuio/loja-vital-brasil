@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Vital Brasil — Página /resultados/ (portal de laudos + vitrine de combos)
+   Fundo branco, limpa, pensada como ponto de conversão.
+   ========================================================================== */
+:root {
+  --vb-azul: #3f5aa0;
+  --vb-azul-escuro: #2a3c72;
+  --vb-verde: #3db885;
+  --vb-verde-escuro: #34a074;
+}
+.rz {
+  font-family: "Mulish", system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  color: #2a3c72;
+}
+.rz-wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* ---- Topo: acesso aos laudos ---- */
+.rz-hero {
+  background:
+    radial-gradient(1200px 400px at 50% -120px, rgba(63, 90, 160, .10), transparent 70%),
+    #fff;
+  padding: 64px 0 48px;
+  text-align: center;
+  border-bottom: 1px solid #eef1f6;
+}
+.rz-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 15px; border-radius: 999px;
+  background: rgba(61, 184, 133, .12); color: var(--vb-verde-escuro);
+  font-size: 13px; font-weight: 700; letter-spacing: .3px;
+  margin-bottom: 18px;
+}
+.rz-hero h1 {
+  font-family: "Poppins", "Mulish", sans-serif;
+  font-size: clamp(28px, 4.4vw, 44px); font-weight: 700;
+  line-height: 1.1; margin: 0 0 12px; color: var(--vb-azul-escuro);
+}
+.rz-lead { font-size: 17px; color: #5b6b82; margin: 0 auto 28px; max-width: 560px; }
+.rz-cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(180deg, var(--vb-azul) 0%, var(--vb-azul-escuro) 100%);
+  color: #fff; font-size: 17px; font-weight: 700;
+  padding: 16px 32px; border-radius: 999px; text-decoration: none;
+  box-shadow: 0 12px 30px rgba(42, 60, 114, .28);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+.rz-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 38px rgba(42, 60, 114, .34); }
+
+.rz-note {
+  max-width: 640px; margin: 26px auto 0;
+  background: #fff9ec; border: 1px solid #f6e6bd; border-radius: 14px;
+  padding: 16px 20px; text-align: left;
+  font-size: 14.5px; line-height: 1.55; color: #7a6320;
+}
+.rz-note strong { color: #8a6d12; }
+
+/* ---- Vitrine de combos ---- */
+.rz-combos { padding: 56px 0 64px; background: #fff; }
+.rz-combos { text-align: center; }
+.rz-eyebrow { color: var(--vb-verde-escuro); font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase; margin: 0 0 8px; }
+.rz-combos h2 {
+  font-family: "Poppins", "Mulish", sans-serif;
+  font-size: clamp(24px, 3.4vw, 34px); font-weight: 700; margin: 0 0 10px; color: var(--vb-azul-escuro);
+}
+.rz-sub { color: #5b6b82; font-size: 16px; margin: 0 auto 34px; max-width: 560px; }
+
+.rz-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  text-align: left; margin-bottom: 36px;
+}
+.rz-card {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid #eef1f6; border-radius: 16px;
+  overflow: hidden; text-decoration: none;
+  box-shadow: 0 10px 26px rgba(24, 38, 74, .07);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.rz-card:hover { transform: translateY(-5px); box-shadow: 0 20px 44px rgba(24, 38, 74, .14); }
+.rz-card-img { display: block; aspect-ratio: 4/3; background: #f2f4f8; overflow: hidden; }
+.rz-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rz-card-body { display: flex; flex-direction: column; gap: 6px; padding: 16px 16px 18px; }
+.rz-card-cat { color: var(--vb-verde-escuro); font-size: 11.5px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+.rz-card-name { color: var(--vb-azul-escuro); font-size: 16px; font-weight: 800; line-height: 1.25; }
+.rz-card-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.rz-card-meta span { color: #7c869c; font-size: 13px; }
+.rz-card-meta strong { color: var(--vb-azul); font-size: 16px; }
+
+.rz-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.rz-btn-primary, .rz-btn-wpp {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 14px 26px; border-radius: 999px;
+  font-size: 15.5px; font-weight: 700; text-decoration: none;
+  transition: transform .15s ease, background .2s ease;
+}
+.rz-btn-primary { background: var(--vb-verde); color: #fff; box-shadow: 0 10px 24px rgba(61, 184, 133, .32); }
+.rz-btn-primary:hover { background: var(--vb-verde-escuro); transform: translateY(-2px); }
+.rz-btn-wpp { background: #fff; color: var(--vb-azul); border: 1.5px solid #dfe4ee; }
+.rz-btn-wpp:hover { border-color: var(--vb-verde); color: var(--vb-verde-escuro); }
+
+@media (max-width: 900px) { .rz-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) {
+  .rz-hero { padding: 44px 0 36px; }
+  .rz-grid { grid-template-columns: 1fr; }
+  .rz-actions { flex-direction: column; }
+  .rz-btn-primary, .rz-btn-wpp { justify-content: center; }
+}

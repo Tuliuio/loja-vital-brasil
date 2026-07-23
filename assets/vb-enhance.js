@@ -17,7 +17,7 @@
   };
 
   var CARDS = [
-    { icon: "laudo", title: "Resultados de exames", sub: "Acesse seus laudos online", href: "http://186.208.144.36:81/laudos/", blank: true },
+    { icon: "laudo", title: "Resultados de exames", sub: "Acesse seus laudos online", href: "/resultados/", blank: false },
     { icon: "loja",  title: "Comprar exames",        sub: "Rotinas e combos na loja",  href: "/loja/",                       blank: false },
     { icon: "conv",  title: "Convênios",             sub: "Veja os parceiros",          href: "/#convenios",                  blank: false },
     { icon: "wpp",   title: "Fale no WhatsApp",      sub: "Agende sua coleta",          href: "https://wa.me/555331990378",   blank: true }
