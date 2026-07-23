@@ -2,6 +2,11 @@
    Vital Brasil — Página /resultados/ (portal de laudos + vitrine de combos)
    Fundo branco, limpa, pensada como ponto de conversão.
    ========================================================================== */
+/* reset — esta página é standalone (não carrega o style.css da loja) */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #ffffff; }
+
 :root {
   --vb-azul: #3f5aa0;
   --vb-azul-escuro: #2a3c72;
