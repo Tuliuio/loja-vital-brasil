@@ -1,0 +1,19 @@
+.elementor-1100 .elementor-element.elementor-element-240eac9{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:space-between;--gap:0px 0px;--row-gap:0px;--column-gap:0px;--padding-top:100px;--padding-bottom:50px;--padding-left:100px;--padding-right:100px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-1100 .elementor-element.elementor-element-2e93d49{width:var( --container-widget-width, 25.124% );max-width:25.124%;--container-widget-width:25.124%;--container-widget-flex-grow:0;text-align:left;}.elementor-1100 .elementor-element.elementor-element-2e93d49 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-1100 .elementor-element.elementor-element-2e93d49.elementor-element{--align-self:flex-end;--flex-grow:0;--flex-shrink:0;}.elementor-1100 .elementor-element.elementor-element-2e93d49 .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:14px;font-weight:400;line-height:15px;color:#375A9F;}.elementor-widget-image .widget-image-caption{color:var( --e-global-color-text );font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );}.elementor-1100 .elementor-element.elementor-element-3d3fd86.elementor-element{--align-self:center;}.elementor-1100 .elementor-element.elementor-element-3d3fd86 img{max-width:290px;}.elementor-1100 .elementor-element.elementor-element-5e5cf29 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-1100 .elementor-element.elementor-element-5e5cf29.elementor-element{--align-self:flex-end;}.elementor-1100 .elementor-element.elementor-element-5e5cf29{text-align:left;}.elementor-1100 .elementor-element.elementor-element-5e5cf29 .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:14px;font-weight:400;line-height:14px;color:#375A9F;}@media(max-width:767px){.elementor-1100 .elementor-element.elementor-element-240eac9{--flex-direction:column;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--align-items:center;--gap:22px 22px;--row-gap:22px;--column-gap:22px;--padding-top:30px;--padding-bottom:80px;--padding-left:30px;--padding-right:30px;}.elementor-1100 .elementor-element.elementor-element-2e93d49 > .elementor-widget-container{margin:0px 0px 30px 0px;}.elementor-1100 .elementor-element.elementor-element-2e93d49{text-align:center;}.elementor-1100 .elementor-element.elementor-element-3d3fd86 img{width:100%;max-width:508px;}.elementor-1100 .elementor-element.elementor-element-5e5cf29 > .elementor-widget-container{margin:30px 0px 0px 0px;}}/* Start custom CSS for image, class: .elementor-element-3d3fd86 */@media (max-width: 767px) {
+    .elementor-1100 .elementor-element.elementor-element-3d3fd86 {max-width: 80% !important;}
+}/* End custom CSS */
+/* Start custom CSS for heading, class: .elementor-element-5e5cf29 */.teste a:link {
+  color: #375A9F;
+}
+ 
+.teste a:visited {
+  color: #375A9F;
+}
+
+.teste a:hover {
+  color: #375A9F;
+  text-decoration: underline;
+}
+
+.teste a:active {
+  color: #375A9F;
+}/* End custom CSS */

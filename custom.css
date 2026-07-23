@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Vital Brasil — custom.css
+   Ajustes finos do SITE (carregado por ÚLTIMO no <head>, depois do Elementor).
+   Nunca editar o CSS minificado do Elementor — tudo que for override entra aqui.
+   ========================================================================== */
+
+/* --- Header unificado: encaixe com o corpo do site ------------------------
+   O header Elementor original foi substituído pelo header padronizado
+   (.vb-header, em /assets/vb-header.css). O corpo do site (hero azul) flui
+   logo abaixo — como ambos são azuis, a emenda fica invisível. */
+
+/* Evita qualquer respiro branco herdado do topo do tema */
+body { overflow-x: clip; }

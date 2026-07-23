@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Vital Brasil — Header unificado (site + loja)
+   Fonte única compartilhada. Namespace .vb-* para não colidir com Elementor
+   nem com o CSS antigo da loja (.site-header).
+   ========================================================================== */
+:root {
+  --vb-azul: #3f5aa0;
+  --vb-azul-escuro: #2a3c72;
+  --vb-verde: #3db885;
+  --vb-verde-escuro: #34a074;
+  --vb-header-h: 68px;
+}
+
+.vb-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, var(--vb-azul) 0%, #3a5397 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .08);
+  transition: box-shadow .25s ease, background .25s ease;
+  font-family: "Mulish", "Inter", system-ui, -apple-system, sans-serif;
+}
+.vb-header.is-scrolled {
+  background: linear-gradient(180deg, #3a5397 0%, var(--vb-azul-escuro) 100%);
+  box-shadow: 0 6px 24px rgba(20, 30, 60, .28);
+}
+
+.vb-header__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  min-height: var(--vb-header-h);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.vb-header__logo { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.vb-header__logo img { height: 40px; width: auto; display: block; }
+
+/* Navegação */
+.vb-header__nav {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+}
+.vb-header__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.vb-header__menu a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .2px;
+  padding: 6px 2px;
+  opacity: .92;
+  transition: opacity .2s ease;
+}
+.vb-header__menu a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  background: var(--vb-verde);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
+}
+.vb-header__menu a:hover { opacity: 1; }
+.vb-header__menu a:hover::after,
+.vb-header__menu a.is-active::after { transform: scaleX(1); }
+.vb-header__menu a.is-active { opacity: 1; }
+
+/* Ações (botões) */
+.vb-header__actions { display: flex; align-items: center; gap: 12px; }
+.vb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 11px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .15s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.vb-btn:active { transform: translateY(1px); }
+.vb-btn--ghost {
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, .55);
+}
+.vb-btn--ghost:hover {
+  border-color: var(--vb-verde);
+  color: var(--vb-verde);
+  background: rgba(255, 255, 255, .04);
+}
+.vb-btn--wpp {
+  color: #fff;
+  background: var(--vb-verde);
+  box-shadow: 0 6px 16px rgba(61, 184, 133, .35);
+}
+.vb-btn--wpp:hover { background: var(--vb-verde-escuro); }
+.vb-btn--wpp svg { width: 17px; height: 17px; fill: currentColor; }
+
+/* Hambúrguer (escondido no desktop) */
+.vb-header__burger {
+  display: none;
+  flex: 0 0 auto;
+  margin-left: auto;
+  width: 44px; height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px;
+}
+.vb-header__burger span {
+  display: block;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.vb-header__burger span + span { margin-top: 5px; }
+
+/* ---------------- Mobile ---------------- */
+@media (max-width: 980px) {
+  .vb-header__burger { display: block; }
+  .vb-header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    background: var(--vb-azul-escuro);
+    padding: 8px 20px 22px;
+    box-shadow: 0 20px 30px rgba(20, 30, 60, .35);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height .3s ease, opacity .2s ease, padding .3s ease;
+  }
+  .vb-header.vb-nav-open .vb-header__nav {
+    max-height: 80vh;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .vb-header__menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+  }
+  .vb-header__menu li { border-bottom: 1px solid rgba(255, 255, 255, .1); }
+  .vb-header__menu a { display: block; padding: 14px 4px; font-size: 16px; opacity: 1; }
+  .vb-header__menu a::after { display: none; }
+  .vb-header__menu a.is-active { color: var(--vb-verde); }
+  .vb-header__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    margin-top: 18px;
+  }
+  .vb-btn { justify-content: center; padding: 14px 18px; font-size: 15px; }
+
+  /* Anima o burger para "X" quando aberto */
+  .vb-header.vb-nav-open .vb-header__burger span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .vb-header.vb-nav-open .vb-header__burger span:nth-child(2) { opacity: 0; }
+  .vb-header.vb-nav-open .vb-header__burger span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+
+@media (max-width: 400px) {
+  .vb-header__inner { padding: 10px 16px; }
+  .vb-header__logo img { height: 34px; }
+}
