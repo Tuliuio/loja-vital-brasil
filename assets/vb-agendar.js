@@ -230,11 +230,11 @@
 
   /* -------------------- Liga os CTAs de agendamento -------------------- */
   /* Delegação: pega qualquer <a> de WhatsApp, inclusive os injetados por
-     outros scripts (ex.: card "Fale no WhatsApp" do vb-enhance.js).
-     Vai DIRETO (não abre modal) quando:
+     outros scripts (ex.: card "Fale no WhatsApp" do vb-enhance.js) e o
+     botão flutuante (que é só ícone, sem texto).
+     Vai DIRETO (não abre modal) só quando:
        - o link tem a classe .wa-direct (número de contato, rodapé, etc.);
-       - o link está DENTRO do próprio modal;
-       - o link não tem texto (ícone flutuante só com imagem). */
+       - o link está DENTRO do próprio modal. */
   document.addEventListener("click", function (e) {
     var node = e.target;
     if (node && node.nodeType === 3) node = node.parentNode;      // text node → elemento
@@ -242,7 +242,6 @@
     if (!a) return;
     if (a.classList.contains("wa-direct")) return;
     if (a.closest(".vb-modal-overlay")) return;
-    if (!(a.textContent || "").trim()) return;                    // só imagem/ícone → direto
     e.preventDefault();
     openModal(a.getAttribute("data-exame"));
   }, false);
