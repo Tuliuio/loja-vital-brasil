@@ -33,7 +33,17 @@ require __DIR__ . '/includes/header.php';
                             <span class="card-exames"><?= count($c['exames']) ?> exames</span>
                             <span class="card-preco"><?= e(preco_fmt($c['preco'])) ?></span>
                         </div>
-                        <a href="combo.php?slug=<?= e($c['slug']) ?>" class="btn btn-primary btn-block">Ver detalhes</a>
+                        <div class="card-acoes">
+                            <a href="combo.php?slug=<?= e($c['slug']) ?>" class="btn btn-outline btn-block">Ver detalhes</a>
+                            <?php if (!empty($c['preco']) && $c['preco'] > 0): ?>
+                                <button type="button" class="btn btn-primary btn-block js-add-carrinho"
+                                        data-slug="<?= e($c['slug']) ?>"
+                                        data-nome="<?= e($c['nome']) ?>"
+                                        data-preco="<?= number_format((float) $c['preco'], 2, '.', '') ?>">
+                                    <span class="js-add-label">Adicionar</span>
+                                </button>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </article>
             <?php endforeach; ?>

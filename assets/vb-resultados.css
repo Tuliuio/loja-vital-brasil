@@ -59,6 +59,16 @@ body { background: #ffffff; }
   font-size: 14.5px; line-height: 1.55; color: #7a6320;
 }
 .rz-note strong { color: #8a6d12; }
+.rz-note p { margin: 0; }
+.rz-note-wpp {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 12px; padding: 9px 16px; border-radius: 999px;
+  background: #25D366; color: #fff; font-weight: 700;
+  font-size: 14px; line-height: 1.2; text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.rz-note-wpp:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(37, 211, 102, .35); }
+.rz-note-wpp svg { width: 18px; height: 18px; fill: currentColor; flex: none; }
 
 /* ---- Vitrine de combos ---- */
 .rz-combos { padding: 56px 0 64px; background: #fff; }

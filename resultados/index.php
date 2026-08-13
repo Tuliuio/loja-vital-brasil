@@ -25,12 +25,16 @@ $featured = array_slice($featured, 0, 4);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de exames | Laboratório Vital Brasil</title>
     <meta name="description" content="Acesse e baixe os resultados dos seus exames online e conheça os combos de rotinas de exames do Laboratório Vital Brasil.">
+    <link rel="icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-32x32.png" sizes="32x32">
+    <link rel="icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-180x180.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/vb-header.css">
     <link rel="stylesheet" href="/assets/vb-footer.css">
     <link rel="stylesheet" href="/assets/vb-resultados.css">
+    <link rel="stylesheet" href="/assets/vb-wpp-float.css">
 </head>
 <body>
 <!-- ===== Header unificado ===== -->
@@ -67,7 +71,11 @@ $featured = array_slice($featured, 0, 4);
       <p class="rz-lead">Acesse e baixe seus laudos com o login e a senha fornecidos no momento da coleta.</p>
       <a class="rz-cta" href="<?= e($LAUDOS_URL) ?>" target="_blank" rel="noopener">Acessar meus resultados →</a>
       <div class="rz-note">
-        <strong>Não abriu de primeira?</strong> É só clicar novamente. O sistema de laudos às vezes falha na primeira tentativa e abre normalmente na segunda — é uma instabilidade momentânea do portal, não do seu computador. Se persistir, fale com a gente no WhatsApp.
+        <p><strong>Não abriu de primeira?</strong> É só clicar novamente. O sistema de laudos às vezes falha na primeira tentativa e abre normalmente na segunda — é uma instabilidade momentânea do portal, não do seu computador.</p>
+        <a class="rz-note-wpp" href="<?= e(whatsapp_link('Olá! Estou tentando acessar meus resultados de exames e o portal não está abrindo. Podem me ajudar?')) ?>" target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C5 9.5 9.9 4.9 16 4.9S27 9.5 27 15 22.1 24.8 16 24.8zm5.6-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2.9 1.2 2.9.8 3.5.8.5 0 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+          Ainda com problema? Fale com a gente no WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -104,6 +112,11 @@ $featured = array_slice($featured, 0, 4);
     </div>
   </section>
 </main>
+
+<!-- Botão flutuante de WhatsApp -->
+<a class="vb-wpp-float" href="<?= e(whatsapp_link('Olá! Preciso de ajuda com os resultados dos meus exames.')) ?>" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C5 9.5 9.9 4.9 16 4.9S27 9.5 27 15 22.1 24.8 16 24.8zm5.6-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6 2.9 1.2 2.9.8 3.5.8.5 0 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
 
 <!-- ===== Footer unificado ===== -->
 <footer class="vb-footer">

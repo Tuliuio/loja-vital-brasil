@@ -6,6 +6,15 @@ session_start();
 $slug  = isset($_GET['slug']) ? preg_replace('/[^a-z0-9\-]/', '', strtolower($_GET['slug'])) : '';
 $combo = $slug ? combo_por_slug($slug) : null;
 
+// ─────────────────────────────────────────────────────────────────────────
+// CHECKOUT COM PAGAMENTO DESATIVADO.
+// A venda agora é finalizada no WhatsApp (carrinho — assets/js/carrinho.js).
+// Qualquer acesso direto a esta página é redirecionado para o combo/loja.
+// O código antigo (ASAAS) foi mantido abaixo apenas para referência/rollback.
+// ─────────────────────────────────────────────────────────────────────────
+header('Location: ' . ($combo ? 'combo.php?slug=' . urlencode($slug) : 'index.php'));
+exit;
+
 // Combo inexistente ou "sob consulta" não entram no checkout.
 if (!$combo || empty($combo['preco']) || $combo['preco'] <= 0) {
     header('Location: ' . ($combo ? 'combo.php?slug=' . urlencode($slug) : 'index.php'));

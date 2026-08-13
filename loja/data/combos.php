@@ -298,7 +298,7 @@ return [
         'destaque'   => false,
         'resumo'     => 'Investigue as causas da queda de cabelo: vitaminas, hormônios e metabolismo.',
         'imagem'     => 'assets/img/painel-queda-capilar.jpg',
-        'preco'      => 173.00,
+        'preco'      => 277.00, // atualizado conforme tabela do cliente (CAPILAR)
         'preco_de'   => 0,
         'preco_obs'  => null,
         'jejum'      => 'Recomendado jejum para alguns exames. Confirme no agendamento.',
@@ -338,7 +338,7 @@ return [
         'destaque'   => false,
         'resumo'     => 'Descubra se cansaço e baixa imunidade têm relação com falta de vitaminas.',
         'imagem'     => 'assets/img/check-up-vitaminas.jpg',
-        'preco'      => 0,      // CONFIRMAR valor
+        'preco'      => 410.00, // atualizado conforme tabela do cliente (VITAMINAS)
         'preco_de'   => 0,
         'preco_obs'  => null,
         'jejum'      => 'Não costuma exigir jejum. Confirme no agendamento.',

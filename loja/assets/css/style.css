@@ -107,6 +107,7 @@ img { max-width: 100%; display: block; }
 .card-meta { display: flex; justify-content: space-between; align-items: center; margin: 16px 0; }
 .card-exames { font-size: .85rem; color: var(--texto-suave); background: var(--cinza-bg); padding: 4px 10px; border-radius: 8px; }
 .card-preco { font-family: 'Poppins'; font-weight: 700; color: var(--cor-escura); font-size: 1.05rem; }
+.card-acoes { display: grid; gap: 10px; }
 
 /* ===== Página interna do produto ===== */
 .breadcrumb { padding: 18px 20px; color: var(--texto-suave); font-size: .9rem; }

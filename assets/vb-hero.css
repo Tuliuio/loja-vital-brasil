@@ -1,7 +1,9 @@
 /* ==========================================================================
-   Vital Brasil — Hero full-bleed com a foto da equipe (Dr. Marco)
+   Vital Brasil — Hero full-bleed com a foto REAL da equipe (Dr. Marco)
    Imagem grande de fundo + gradiente escuro à esquerda para contraste do texto.
    Substitui a imagem/máscara antiga do Elementor sem tocar no HTML minificado.
+   NOTA: usamos a foto real (equipe-vital.png) no lugar da versão gerada por IA
+   (hero-equipe.jpg). Se surgir uma foto de maior resolução, basta trocar a URL.
    ========================================================================== */
 .elementor-element-6adac86 {
   background-image:
@@ -11,7 +13,7 @@
       rgba(16, 26, 58, .64) 44%,
       rgba(16, 26, 58, .34) 64%,
       rgba(16, 26, 58, .20) 100%),
-    url('/wp-content/uploads/2026/07/hero-equipe.jpg') !important;
+    url('/wp-content/uploads/2025/06/equipe-vital-hero.png') !important;
   background-size: cover !important;
   background-position: center right !important;
   background-repeat: no-repeat !important;
@@ -34,7 +36,7 @@
         rgba(16, 26, 58, .88) 0%,
         rgba(16, 26, 58, .80) 42%,
         rgba(16, 26, 58, .70) 100%),
-      url('/wp-content/uploads/2026/07/hero-equipe.jpg') !important;
+      url('/wp-content/uploads/2025/06/equipe-vital-hero.png') !important;
   }
   /* no mobile a imagem de fundo já mostra a equipe; remove o espaço reservado */
   .elementor-element-b6755c6 { display: none !important; }

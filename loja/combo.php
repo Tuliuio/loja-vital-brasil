@@ -54,9 +54,12 @@ require __DIR__ . '/includes/header.php';
 
             <div class="produto-cta">
                 <?php if (!empty($combo['preco']) && $combo['preco'] > 0): ?>
-                    <a href="checkout.php?slug=<?= e($combo['slug']) ?>" class="btn btn-primary btn-lg">
-                        Comprar agora
-                    </a>
+                    <button type="button" class="btn btn-primary btn-lg js-add-carrinho"
+                            data-slug="<?= e($combo['slug']) ?>"
+                            data-nome="<?= e($combo['nome']) ?>"
+                            data-preco="<?= number_format((float) $combo['preco'], 2, '.', '') ?>">
+                        <span class="js-add-label">Adicionar ao carrinho</span>
+                    </button>
                     <a href="<?= e(whatsapp_link($msg_wpp)) ?>" class="btn btn-outline" target="_blank" rel="noopener">
                         Tirar dúvidas
                     </a>

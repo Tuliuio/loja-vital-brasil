@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Vital Brasil — Botão flutuante de WhatsApp (compartilhado: loja e resultados)
+   Fica no canto inferior direito. Na loja, o carrinho (vb-cart-fab) é
+   reposicionado para ficar ACIMA deste botão (ver carrinho.css).
+   ========================================================================== */
+.vb-wpp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 890;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
+  transition: transform .15s, box-shadow .15s;
+}
+.vb-wpp-float:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0, 0, 0, .28); }
+.vb-wpp-float svg { width: 32px; height: 32px; fill: currentColor; }
+
+@media (max-width: 480px) {
+  .vb-wpp-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
+}

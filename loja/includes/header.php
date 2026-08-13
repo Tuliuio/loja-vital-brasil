@@ -17,13 +17,18 @@ $descricao = $page_description ?? config('site_slogan');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($titulo) ?></title>
     <meta name="description" content="<?= e($descricao) ?>">
+    <link rel="icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-32x32.png" sizes="32x32">
+    <link rel="icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/wp-content/uploads/2025/01/cropped-Ativo-6VITAL-FAVICON-180x180.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Header + Footer unificados (mesmos do site institucional) -->
     <link rel="stylesheet" href="/assets/vb-header.css">
     <link rel="stylesheet" href="/assets/vb-footer.css">
+    <link rel="stylesheet" href="/assets/vb-wpp-float.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
     <style>
         :root {
             --cor-primaria: <?= e(config('cor_primaria')) ?>;
