@@ -177,7 +177,6 @@ h2 { font-family: "Poppins", sans-serif; margin: 0; }
 
 /* ---- Rodapé ---- */
 .bio-foot { text-align: center; padding: 10px 0 4px; }
-.bio-foot p { margin: 0 0 12px; font-weight: 700; font-size: 14px; color: #5a6b8f; }
 .bio-foot-logo img { width: 160px; height: auto; opacity: .85; }
 
 @media (max-width: 360px) {
