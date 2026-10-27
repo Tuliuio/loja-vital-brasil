@@ -79,6 +79,33 @@
       '\n\n*Total: ' + brl(total(itens)) + '*' +
       '\n\nComo faço para o pagamento e o agendamento da coleta? Obrigado!';
     var url = 'https://wa.me/' + WPP + '?text=' + encodeURIComponent(msg);
+
+    // ---- Rastreamento: início de checkout via WhatsApp ----
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ ecommerce: null }); // limpa o objeto anterior
+      window.dataLayer.push({
+        event: 'finalizar_whatsapp',
+        event_id: 'ic-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10),
+        currency: 'BRL',
+        value: total(itens),
+        num_items: count(itens),
+        // formato GA4
+        ecommerce: {
+          currency: 'BRL',
+          value: total(itens),
+          items: itens.map(function (i) {
+            return { item_id: i.slug, item_name: i.nome, price: i.preco, quantity: i.qtd };
+          })
+        },
+        // formato Meta (contents / content_ids)
+        contents: itens.map(function (i) {
+          return { id: i.slug, quantity: i.qtd, item_price: i.preco };
+        }),
+        content_ids: itens.map(function (i) { return i.slug; })
+      });
+    } catch (e) {}
+
     window.open(url, '_blank', 'noopener');
   }
 
