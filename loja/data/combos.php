@@ -27,6 +27,53 @@
 
 return [
 
+    // ───────────────────────── EMAGRECIMENTO ─────────────────────────
+    // Exames e preço confirmados pelo Marco em 2026-10-27 (promoção até o fim de 2026).
+    [
+        'slug'       => 'rotina-vital-canetas',
+        'rascunho'   => false,
+        'nome'       => 'Rotina Vital Canetas',
+        'categoria'  => 'Emagrecimento',
+        'destaque'   => true,
+        'resumo'     => 'Acompanhamento laboratorial para quem usa ou vai começar a usar canetas emagrecedoras.',
+        'imagem'     => 'assets/img/rotina-vital-canetas.jpg',
+        'preco'      => 217.00,
+        'preco_de'   => 267.00,
+        'preco_obs'  => 'Valor promocional até o final de 2026.',
+        'jejum'      => 'Recomendado jejum para alguns exames. Confirme no agendamento.', // CONFIRMAR
+        'indicacao'  => 'Quem vai iniciar ou já faz tratamento com canetas emagrecedoras e quer acompanhar a saúde durante o emagrecimento.',
+        'descricao'  => 'A caneta ajuda a perder peso, mas só os exames mostram como o seu corpo está respondendo. Esta rotina serve como marco zero antes de começar o tratamento e como acompanhamento ao longo dele, para cuidar das vitaminas, do ferro, do fígado e da massa muscular. Não precisa de pedido médico: você já leva os resultados prontos para a primeira consulta.',
+        'beneficios' => [
+            'Marco zero antes de iniciar a caneta',
+            'Acompanhamento de vitaminas, ferro e fígado durante o tratamento',
+            'Resultados prontos para levar à consulta',
+        ],
+        'exames'     => [ // lista enviada pelo Marco em 2026-10-27
+            'Hemograma completo',
+            'Glicemia de jejum',
+            'Hemoglobina glicada',
+            'Insulina',
+            'Colesterol e frações',
+            'Creatinina',
+            'Ureia',
+            'TGO',
+            'TGP',
+            'GGT',
+            'Ácido úrico',
+            'TSH',
+            'T4 livre (T4L)',
+            'Ferritina',
+            'Vitamina B12',
+            'Vitamina D',
+            'Albumina',
+            'PCR',
+            'Urina tipo I (EQU)',
+            'Sódio',
+            'Potássio',
+        ],
+        'adicionais' => [],
+    ],
+
     // ───────────────────────── SAÚDE DA MULHER ─────────────────────────
     [
         'slug'       => 'rotina-vital-mulher',

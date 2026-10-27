@@ -24,6 +24,8 @@ function combos(): array {
     static $lista = null;
     if ($lista === null) {
         $lista = require __DIR__ . '/../data/combos.php';
+        // combos com 'rascunho' => true ficam fora da loja, do /bio e do /resultados
+        $lista = array_values(array_filter($lista, fn($c) => empty($c['rascunho'])));
     }
     return $lista;
 }

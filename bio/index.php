@@ -9,7 +9,8 @@ require_once __DIR__ . '/../loja/includes/functions.php';
 $LAUDOS_URL = 'http://186.208.144.36:81/laudos/';
 $INSTAGRAM  = 'https://www.instagram.com/vitalbrasil/'; // CONFIRMAR @ oficial
 
-$combo    = combo_por_slug('rotina-vital-mulher');
+// Destaque: combo das canetas assim que sair do rascunho; até lá, Rotina Vital Mulher.
+$combo    = combo_por_slug('rotina-vital-canetas') ?? combo_por_slug('rotina-vital-mulher');
 $endereco = config('endereco');                       // Rua General Osório, 968 - Pelotas/RS
 $destino  = rawurlencode('Laboratório Vital Brasil, ' . $endereco);
 $destTxt  = rawurlencode($endereco);
@@ -65,7 +66,7 @@ $wppIcon = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8
     <span>Agendar pelo WhatsApp<small><?= e(config('telefone')) ?></small></span>
   </a>
 
-  <!-- ===== Destaque: Rotina Vital Mulher ===== -->
+  <!-- ===== Combo em destaque (ver $combo acima) ===== -->
   <?php if ($combo): ?>
   <section class="bio-combo" aria-labelledby="combo-title">
     <div class="bio-combo-img">
@@ -79,8 +80,12 @@ $wppIcon = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8
 
       <div class="bio-combo-price">
         <span class="bio-combo-n"><strong><?= count($combo['exames']) ?></strong> exames</span>
-        <span class="bio-combo-val"><small>por</small> <?= e(preco_fmt($combo['preco'])) ?></span>
+        <span class="bio-combo-val">
+          <?php if (!empty($combo['preco_de']) && $combo['preco_de'] > 0): ?><small class="bio-combo-de">de <s><?= e(preco_fmt($combo['preco_de'])) ?></s></small><?php endif; ?>
+          <small>por</small> <?= e(preco_fmt($combo['preco'])) ?>
+        </span>
       </div>
+      <?php if (!empty($combo['preco_obs'])): ?><p class="bio-combo-obs"><?= e($combo['preco_obs']) ?></p><?php endif; ?>
 
       <details class="bio-combo-list">
         <summary>Ver os <?= count($combo['exames']) ?> exames inclusos</summary>
