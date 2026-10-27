@@ -44,7 +44,7 @@ $wppIcon = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/vb-bio.css?v=2">
+    <link rel="stylesheet" href="/assets/vb-bio.css?v=3">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FTMHJM8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
